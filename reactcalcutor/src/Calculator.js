@@ -1,4 +1,4 @@
-import './calculator.css';
+﻿import './calculator.css';
 
 const Calculator = () => {
 
@@ -13,10 +13,10 @@ const Calculator = () => {
     }
     return (
         <>
-            <div>
-                <p>Math</p>
-                <div>
-                    <input type="number" /> {/* Display Result */}
+            <div className="math-container">
+                <p>Happy counting! (•‿•) </p>
+                    <input type="string" /> {/* Display Result */}
+                <div className="number-container">
                     <button>+</button>
                     <button>-</button>
                     <button>=</button>
