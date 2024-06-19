@@ -1,3 +1,5 @@
+import './calculator.css';
+
 const Calculator = () => {
 
     {
