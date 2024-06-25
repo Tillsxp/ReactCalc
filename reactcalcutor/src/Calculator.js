@@ -1,8 +1,6 @@
 ﻿import './calculator.css';
 import { useState } from 'react';
 
-{/* Check first value in console log */ }
-
 const Calculator = () => {
 
     const numberButtons = [];
@@ -30,9 +28,8 @@ const Calculator = () => {
 
     return (
         <>
-            <div className="math-container">
-                <p className="rainbow">Happy counting! (•‿•) </p>
-                <input type="string" value={number} readOnly /> {/* Display Result */}
+
+                <p>Happy counting! (•‿•) </p>
                 <div className="number-container">
                     <button onClick={handleClick} value={"+"}>+</button>
                     <button onClick={handleClick} value={"-"}>-</button>
@@ -42,7 +39,6 @@ const Calculator = () => {
                     <button onClick={handleClick} value={"CE"}>C</button>
                     {numberButtons}
                 </div>
-            </div>
         </>)
 }
 
