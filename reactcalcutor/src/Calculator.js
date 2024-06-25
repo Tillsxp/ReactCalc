@@ -1,6 +1,8 @@
 ﻿import './calculator.css';
 import { useState } from 'react';
 
+{/* Check first value in console log */ }
+
 const Calculator = () => {
 
     const numberButtons = [];
@@ -8,20 +10,24 @@ const Calculator = () => {
     const handleClick = (e) => {
         const value = e.target.value;
 
-        return value == "C" ? setNumber("")
-            : value == "CE" ? setNumber(prevNumber => prevNumber.slice(0, 0 - 1))
-                : setNumber(prevNumber => prevNumber + value); {}
-        const numberValue = parseInt(number, 10);
-        number = numberValue;
-        console.log(number);
+        if (value === "C") {
+            setNumber("");
+        } else if (value === "CE") {
+            setNumber(prevNumber => prevNumber.slice(0, -1));
+        }
+        else {
+            setNumber(prevNumber => prevNumber + value);
+        }
+
     };
     for (let i = 0; i < 10; i++) {
         numberButtons.push(<button key={i} onClick={handleClick} value={i}>{i}</button>);
     }
-
-    const handleMatch = (e) => {
-        {/* Count Math if = is pressed*/ }
+    const handleMath = (e) => {
+        const result = eval(number);
+        setNumber(result.toString());
     }
+
     return (
         <>
             <div className="math-container">
@@ -30,7 +36,7 @@ const Calculator = () => {
                 <div className="number-container">
                     <button onClick={handleClick} value={"+"}>+</button>
                     <button onClick={handleClick} value={"-"}>-</button>
-                    <button onClick={handleClick} >=</button> {/* Don't print = only show */ }
+                    <button onClick={handleMath} >=</button> {/* Don't print = only show */}
                     <button onClick={handleClick} value={"."}>.</button>
                     <button onClick={handleClick} value={"C"}>CE</button>
                     <button onClick={handleClick} value={"CE"}>C</button>
