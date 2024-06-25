@@ -1,0 +1,86 @@
+
+
+.math-container{
+    background-color:#e1e1e1;
+    border: 1px solid #808080;
+    min-width:19vw;
+    height:35vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.math-container input{
+    font-size:2rem;
+    width:11.5rem;
+}
+.math-container input:focus{
+    outline:solid 1px blue;
+}
+.number-container{
+    display:grid;
+    grid-template-columns: 3rem 3rem 3rem 3rem;
+    grid-template-rows: 3rem 3rem 3rem 3rem;
+}
+.number-container button{
+    width:3rem;
+}
+@media screen and (max-width:1200px){
+    .math-container{
+        min-width:22vw;
+        max-height:20vh;
+    }
+}
+.rainbow {
+    animation: rainbow 2.5s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbow{
+    100%,0% {
+        color: rgb(255,0,0);
+    }
+
+    8% {
+        color: rgb(255,127,0);
+    }
+
+    16% {
+        color: rgb(255,255,0);
+    }
+
+    25% {
+        color: rgb(127,255,0);
+    }
+
+    33% {
+        color: rgb(0,255,0);
+    }
+
+    41% {
+        color: rgb(0,255,127);
+    }
+
+    50% {
+        color: rgb(0,255,255);
+    }
+
+    58% {
+        color: rgb(0,127,255);
+    }
+
+    66% {
+        color: rgb(0,0,255);
+    }
+
+    75% {
+        color: rgb(127,0,255);
+    }
+
+    83% {
+        color: rgb(255,0,255);
+    }
+
+    91% {
+        color: rgb(255,0,127);
+    }
+}
