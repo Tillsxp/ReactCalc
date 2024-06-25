@@ -20,7 +20,7 @@ const Calculator = () => {
 
     };
     const handleMath = (e) => {
-        const result = eval(number);
+        const result = eval(`${number}`);
         setNumber(result.toString());
     }
 
