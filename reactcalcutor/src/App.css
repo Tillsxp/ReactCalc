@@ -19,7 +19,7 @@
 
     .math-container input {
         font-size: 2rem;
-        width: 11.5rem;
+        width: 8.5rem;
     }
 
         .math-container input:focus {
@@ -28,8 +28,8 @@
 
 .number-container {
     display: grid;
-    grid-template-columns: 3rem 3rem 3rem 3rem;
-    grid-template-rows: 3rem 3rem 3rem 3rem;
+    grid-template-columns: 3rem 3rem 3rem ;
+    grid-auto-rows: 2rem;
 }
 
     .number-container button {
