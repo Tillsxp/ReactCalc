@@ -7,7 +7,6 @@ function App() {
         <>
             <div className="main-container">
                 <div className="math-container">
-                <Display />
                 <Calculator />
                 </div>
             </div>
